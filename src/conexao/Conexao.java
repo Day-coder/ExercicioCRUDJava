@@ -1,0 +1,25 @@
+package conexao;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class Conexao {
+	public static Connection con=null;
+	
+	public static Connection conectar() {
+		String url= "jdbc:postgresql://localhost:5432/exercicio"; 
+		String user= "postgres"; 
+		String senha= "postgres";
+		try {
+			con= DriverManager.getConnection(url, user, senha);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return con;
+	}
+	public static void fechar() {
+		con=null;
+	}
+
+}
