@@ -8,9 +8,9 @@ public class Conexao {
 	public static Connection con=null;
 	
 	public static Connection conectar() {
-		String url= "jdbc:postgresql://localhost:5432/exercicio"; 
-		String user= "postgres"; 
-		String senha= "postgres";
+		String url= ""; 
+		String user= ""; 
+		String senha= "";
 		try {
 			con= DriverManager.getConnection(url, user, senha);
 		} catch (SQLException e) {
